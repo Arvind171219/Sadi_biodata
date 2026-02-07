@@ -4,29 +4,34 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Arvind Kumar - Marriage Biodata</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
   :root {
-    --deep: #1b1b1b;
-    --gold: #c8a35a;
-    --gold-light: #e4cf94;
-    --gold-pale: #f7f0dd;
-    --gold-ghost: #fcf8ee;
-    --warm: #f8f4ed;
-    --white: #ffffff;
-    --text: #1a1a1a;
-    --text-2: #4a4a4a;
-    --text-3: #888;
-    --text-4: #bbb;
-    --line: #eae6e0;
+    --teal: #1a5c5a;
+    --teal-deep: #0e3d3c;
+    --teal-soft: #2a7a77;
+    --teal-glow: #3d9994;
+    --copper: #c47a4a;
+    --copper-light: #dda87a;
+    --copper-pale: #f5e4d4;
+    --copper-ghost: #fdf6ef;
+    --sand: #f9f3ec;
+    --linen: #fefcf9;
+    --text: #1e2d2c;
+    --text-2: #3d5250;
+    --text-3: #7a918f;
+    --text-4: #a8bab8;
+    --line: #e2ddd6;
+    --line-soft: #efe9e2;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
-    font-family: 'DM Sans', sans-serif;
-    background: linear-gradient(180deg, #ede8e0 0%, #e4ddd3 100%);
+    font-family: 'Poppins', sans-serif;
+    background: #e8e0d5;
+    background-image: radial-gradient(ellipse at 50% 0%, rgba(26,92,90,0.05) 0%, transparent 60%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -36,363 +41,448 @@
 
   .page {
     width: 100%;
-    max-width: 460px;
-    background: var(--white);
-    border-radius: 24px;
+    max-width: 470px;
+    background: var(--linen);
+    border-radius: 28px;
     overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.03), 0 16px 48px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04), 0 20px 60px rgba(14,61,60,0.1);
   }
 
   /* ══════ HEADER ══════ */
   .header {
-    background: var(--deep);
-    padding: 30px 20px 24px;
+    background: linear-gradient(155deg, var(--teal-deep) 0%, var(--teal) 60%, var(--teal-soft) 100%);
+    padding: 34px 20px 28px;
     text-align: center;
     position: relative;
+    overflow: hidden;
+  }
+
+  .header::before {
+    content: '';
+    position: absolute;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    border: 1px solid rgba(196,122,74,0.08);
+    top: -140px; right: -80px;
   }
 
   .header::after {
     content: '';
     position: absolute;
     bottom: 0; left: 0; right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, transparent 5%, var(--gold) 50%, transparent 95%);
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--copper), var(--copper-light), var(--copper), transparent);
   }
 
   .mantra {
-    font-size: 10px;
-    color: var(--gold);
-    letter-spacing: 4px;
-    font-weight: 600;
-    text-transform: uppercase;
+    font-family: 'Crimson Pro', serif;
+    font-size: 12px;
+    color: var(--copper-light);
+    letter-spacing: 3.5px;
+    font-weight: 500;
+    font-style: italic;
   }
 
   .header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
+    font-family: 'Crimson Pro', serif;
+    font-size: 32px;
     color: #fff;
     font-weight: 700;
-    margin: 8px 0;
+    margin: 6px 0;
+    letter-spacing: 1px;
   }
 
-  .h-line {
+  .orn {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
+    margin-top: 4px;
   }
 
-  .h-line span { width: 32px; height: 0.5px; background: var(--gold); opacity: 0.4; }
-  .h-line .dia { width: 6px; height: 6px; background: var(--gold); transform: rotate(45deg); }
+  .orn .ln { width: 36px; height: 1px; background: linear-gradient(90deg, transparent, var(--copper-light)); }
+  .orn .ln:last-child { background: linear-gradient(90deg, var(--copper-light), transparent); }
+  .orn .circle { width: 7px; height: 7px; border: 1.5px solid var(--copper-light); border-radius: 50%; }
 
   /* ══════ PROFILE ══════ */
   .profile {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 26px 20px 0;
+    padding: 28px 20px 0;
   }
 
-  .photo-ring {
-    width: 130px; height: 130px;
+  .avatar-outer {
+    width: 135px; height: 135px;
     border-radius: 50%;
     padding: 3px;
-    background: conic-gradient(from 45deg, var(--gold), var(--gold-light), var(--gold), var(--deep), var(--gold), var(--gold-light), var(--gold));
-    margin-bottom: 14px;
-    box-shadow: 0 4px 20px rgba(200,163,90,0.2);
+    background: linear-gradient(135deg, var(--teal), var(--copper), var(--teal-soft), var(--copper-light));
+    margin-bottom: 16px;
+    box-shadow: 0 6px 24px rgba(26,92,90,0.2), 0 2px 8px rgba(196,122,74,0.15);
   }
 
-  .photo {
+  .avatar-inner {
     width: 100%; height: 100%;
     border-radius: 50%;
-    border: 3px solid #fff;
+    border: 3px solid var(--linen);
     overflow: hidden;
-    background: var(--warm);
+    background: var(--sand);
   }
 
-  .photo img {
+  .avatar-inner img {
     width: 100%; height: 100%;
     object-fit: cover;
     display: block;
   }
 
-  .profile h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 24px;
+  .profile .name {
+    font-family: 'Crimson Pro', serif;
+    font-size: 26px;
     font-weight: 700;
     color: var(--text);
+    letter-spacing: 0.3px;
   }
 
-  .profile .sub {
-    font-size: 13px;
-    color: var(--text-3);
+  .profile .role {
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--teal-soft);
     margin-top: 2px;
+    letter-spacing: 0.4px;
   }
 
+  /* Social */
   .socials {
     display: flex;
     gap: 8px;
-    margin-top: 12px;
+    margin-top: 14px;
   }
 
-  .s-btn {
+  .soc {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 7px 14px;
+    padding: 7px 15px;
     border-radius: 99px;
-    font-size: 12px;
+    font-size: 11.5px;
     font-weight: 600;
     text-decoration: none;
     color: #fff;
-    transition: transform 0.15s;
+    letter-spacing: 0.2px;
+    transition: transform 0.15s, box-shadow 0.2s;
   }
 
-  .s-btn:active { transform: scale(0.96); }
-  .s-btn i { font-size: 13px; }
-  .s-btn.li { background: #0A66C2; }
-  .s-btn.ig { background: linear-gradient(135deg, #F58529, #DD2A7B, #8134AF); }
+  .soc:active { transform: scale(0.96); }
+  .soc i { font-size: 13px; }
+  .soc.li { background: #0A66C2; }
+  .soc.li:hover { box-shadow: 0 4px 14px rgba(10,102,194,0.3); }
+  .soc.ig { background: linear-gradient(135deg, #F58529, #DD2A7B, #8134AF); }
+  .soc.ig:hover { box-shadow: 0 4px 14px rgba(221,42,123,0.3); }
 
-  .chips {
+  /* Tags */
+  .tags {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 6px;
-    margin: 16px 0 22px;
+    margin: 18px 0 24px;
   }
 
-  .chip {
-    font-size: 11px;
+  .tag {
+    font-size: 10.5px;
     font-weight: 600;
-    color: var(--gold);
-    background: var(--gold-ghost);
-    border: 1px solid var(--gold-pale);
-    padding: 4px 12px;
+    color: var(--teal);
+    background: #eaf4f3;
+    border: 1px solid #d0e8e6;
+    padding: 4px 13px;
     border-radius: 99px;
+    letter-spacing: 0.3px;
   }
 
-  .sep { height: 1px; background: var(--line); margin: 0 20px; }
+  .divider {
+    height: 1px;
+    margin: 0 24px;
+    background: linear-gradient(90deg, transparent, var(--line), transparent);
+  }
 
-  /* ══════ CONTENT ══════ */
-  .body { padding: 0 20px 24px; }
-  .section { padding-top: 20px; }
+  /* ══════ BODY ══════ */
+  .body { padding: 0 20px 28px; }
+  .section { padding-top: 22px; }
 
   .stitle {
-    font-family: 'Playfair Display', serif;
-    font-size: 16px;
+    font-family: 'Crimson Pro', serif;
+    font-size: 17px;
     font-weight: 700;
     color: var(--text);
     margin-bottom: 10px;
-    padding-left: 12px;
-    border-left: 3px solid var(--gold);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: 0.3px;
   }
 
-  /* Rows */
-  .tbl {
+  .stitle .dot {
+    width: 8px; height: 8px;
+    background: linear-gradient(135deg, var(--teal), var(--copper));
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .stitle::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--line), transparent);
+  }
+
+  /* Info Table */
+  .info-tbl {
     border: 1px solid var(--line);
-    border-radius: 12px;
+    border-radius: 14px;
     overflow: hidden;
   }
 
-  .tr {
+  .irow {
     display: flex;
-    font-size: 13px;
-    border-bottom: 1px solid var(--line);
+    font-size: 12.5px;
+    border-bottom: 1px solid var(--line-soft);
   }
 
-  .tr:last-child { border-bottom: none; }
+  .irow:last-child { border-bottom: none; }
 
-  .tr .tk {
-    width: 115px;
+  .irow:nth-child(even) { background: rgba(26,92,90,0.015); }
+
+  .irow .ik {
+    width: 110px;
     flex-shrink: 0;
-    padding: 9px 12px;
+    padding: 10px 14px;
     font-weight: 600;
     color: var(--text-3);
-    background: var(--gold-ghost);
-    font-size: 11px;
+    font-size: 10.5px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
   }
 
-  .tr .tv {
+  .irow .iv {
     flex: 1;
-    padding: 9px 12px;
+    padding: 10px 14px;
     font-weight: 500;
     color: var(--text-2);
   }
 
   /* Education */
-  .edu-col { display: flex; flex-direction: column; gap: 6px; }
+  .edu-stack { display: flex; flex-direction: column; gap: 8px; }
 
   .edu {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 12px;
-    border-radius: 12px;
-    background: var(--gold-ghost);
-    border: 1px solid var(--gold-pale);
+    gap: 14px;
+    padding: 14px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #eaf4f3, #f4f9f8);
+    border: 1px solid #d8ece9;
+    transition: transform 0.15s;
   }
 
-  .edu .badge {
-    background: var(--deep);
-    color: var(--gold-light);
-    font-size: 10px;
+  .edu:active { transform: scale(0.99); }
+
+  .edu .yr {
+    background: linear-gradient(135deg, var(--teal-deep), var(--teal));
+    color: var(--copper-light);
+    font-size: 11px;
     font-weight: 700;
-    padding: 5px 10px;
-    border-radius: 8px;
-    min-width: 44px;
+    padding: 6px 11px;
+    border-radius: 10px;
+    min-width: 48px;
     text-align: center;
+    letter-spacing: 0.3px;
   }
 
-  .edu .e1 { font-size: 13px; font-weight: 700; color: var(--text); }
-  .edu .e2 { font-size: 11.5px; color: var(--text-3); margin-top: 1px; }
+  .edu .et {
+    font-family: 'Crimson Pro', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .edu .es { font-size: 11.5px; color: var(--text-3); margin-top: 1px; }
 
   /* Profession */
   .pro {
-    background: linear-gradient(140deg, #1a1a1a, #2c2c2c);
-    border-radius: 14px;
-    padding: 20px;
+    background: linear-gradient(145deg, var(--teal-deep), var(--teal), var(--teal-soft));
+    border-radius: 16px;
+    padding: 22px;
     color: #fff;
     position: relative;
     overflow: hidden;
   }
 
-  .pro::after {
+  .pro::before {
     content: '';
     position: absolute;
-    top: -20px; right: -20px;
-    width: 100px; height: 100px;
+    bottom: -30px; right: -30px;
+    width: 120px; height: 120px;
     border-radius: 50%;
-    border: 1px solid rgba(200,163,90,0.1);
+    border: 1px solid rgba(196,122,74,0.12);
   }
 
-  .pro .pt {
-    font-family: 'Playfair Display', serif;
-    font-size: 20px;
+  .pro .p1 {
+    font-family: 'Crimson Pro', serif;
+    font-size: 22px;
     font-weight: 700;
+    letter-spacing: 0.3px;
   }
 
-  .pro .pc {
-    color: var(--gold);
+  .pro .p2 {
+    color: var(--copper-light);
     font-size: 13.5px;
     font-weight: 600;
     margin-top: 2px;
   }
 
-  .pro .pm { display: flex; gap: 6px; margin-top: 10px; flex-wrap: wrap; }
+  .pro .pills { display: flex; gap: 6px; margin-top: 12px; flex-wrap: wrap; }
 
-  .pro .pp {
+  .pro .pill {
     font-size: 10.5px;
     font-weight: 600;
-    padding: 4px 10px;
+    padding: 5px 12px;
     border-radius: 99px;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(200,163,90,0.2);
-    color: var(--gold-light);
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(221,168,122,0.2);
+    color: var(--copper-pale);
+    letter-spacing: 0.2px;
   }
 
   /* Family */
-  .fgrid {
+  .fam-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 6px;
+    gap: 8px;
   }
 
-  .fc {
-    padding: 11px 13px;
-    border-radius: 12px;
-    background: var(--warm);
-    border: 1px solid var(--line);
+  .fcard {
+    padding: 12px 14px;
+    border-radius: 14px;
+    background: var(--copper-ghost);
+    border: 1px solid var(--copper-pale);
   }
 
-  .fc .fr {
+  .fcard .fr {
     font-size: 9px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.6px;
-    color: var(--gold);
+    letter-spacing: 0.7px;
+    color: var(--copper);
   }
 
-  .fc .fn { font-size: 13px; font-weight: 600; color: var(--text); margin-top: 2px; }
-  .fc .fo { font-size: 11px; color: var(--text-3); }
-  .fc.w { grid-column: 1 / -1; }
+  .fcard .fn {
+    font-family: 'Crimson Pro', serif;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--text);
+    margin-top: 3px;
+  }
+
+  .fcard .fo { font-size: 11px; color: var(--text-3); margin-top: 1px; }
+  .fcard.full { grid-column: 1 / -1; }
 
   /* Contact */
   .cbox {
-    background: var(--warm);
-    border-radius: 14px;
-    padding: 16px;
-    border: 1px solid var(--line);
+    background: linear-gradient(135deg, #eaf4f3, #f2f7f6);
+    border-radius: 16px;
+    padding: 18px;
+    border: 1px solid #d0e8e6;
   }
 
-  .al {
+  .clabel {
     font-size: 9px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.6px;
+    letter-spacing: 0.7px;
     color: var(--text-4);
-    margin-bottom: 3px;
+    margin-bottom: 4px;
   }
 
-  .at {
+  .caddr {
     font-size: 12.5px;
     color: var(--text-2);
-    line-height: 1.6;
-    padding-bottom: 12px;
-    margin-bottom: 12px;
-    border-bottom: 1px dashed var(--line);
+    line-height: 1.65;
+    padding-bottom: 14px;
+    margin-bottom: 14px;
+    border-bottom: 1px dashed #c8dbd8;
   }
 
-  .crow { display: flex; flex-direction: column; gap: 10px; }
+  .citems { display: flex; flex-direction: column; gap: 12px; }
 
-  .cit { display: flex; align-items: center; gap: 10px; }
+  .ci {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
 
-  .cit .ico {
-    width: 32px; height: 32px;
-    border-radius: 50%;
-    background: var(--deep);
+  .ci .cic {
+    width: 34px; height: 34px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--teal), var(--teal-soft));
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
   }
 
-  .cit .ico svg {
-    width: 13px; height: 13px;
-    stroke: var(--gold); fill: none;
+  .ci .cic svg {
+    width: 14px; height: 14px;
+    stroke: var(--copper-light); fill: none;
     stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
   }
 
-  .cit .ck { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; color: var(--text-4); }
-  .cit .cx { font-size: 13px; font-weight: 600; color: var(--text); word-break: break-all; }
+  .ci .cl { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-4); }
+  .ci .cv { font-size: 13px; font-weight: 600; color: var(--text); word-break: break-all; }
 
+  /* Footer */
   .foot {
     text-align: center;
-    padding: 18px 0 4px;
-    border-top: 1px solid var(--line);
-    margin-top: 4px;
+    padding: 20px 0 6px;
+    margin-top: 6px;
   }
 
+  .foot-orn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 8px;
+  }
+
+  .foot-orn .fl { width: 28px; height: 1px; background: linear-gradient(90deg, transparent, var(--copper-light)); }
+  .foot-orn .fr { width: 28px; height: 1px; background: linear-gradient(90deg, var(--copper-light), transparent); }
+  .foot-orn .fc { width: 5px; height: 5px; border-radius: 50%; background: var(--copper); }
+
   .foot .sv {
-    font-family: 'Playfair Display', serif;
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--gold);
+    font-family: 'Crimson Pro', serif;
+    font-size: 14px;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--teal);
     letter-spacing: 2px;
   }
 
-  .gbar {
-    height: 3px;
-    margin-top: 16px;
-    background: linear-gradient(90deg, transparent 5%, var(--gold) 30%, var(--gold-light) 50%, var(--gold) 70%, transparent 95%);
+  .bottom-strip {
+    height: 4px;
+    margin-top: 18px;
+    background: linear-gradient(90deg, var(--teal), var(--copper), var(--teal-soft), var(--copper-light), var(--teal));
   }
 
+  /* ══════ RESPONSIVE ══════ */
   @media (max-width: 360px) {
     .body, .profile { padding-left: 14px; padding-right: 14px; }
-    .header { padding: 24px 14px 20px; }
-    .fgrid { grid-template-columns: 1fr; }
-    .fc.w { grid-column: auto; }
-    .tr .tk { width: 95px; font-size: 10px; }
-    .photo-ring { width: 110px; height: 110px; }
+    .header { padding: 26px 14px 22px; }
+    .header h1 { font-size: 26px; }
+    .fam-grid { grid-template-columns: 1fr; }
+    .fcard.full { grid-column: auto; }
+    .irow .ik { width: 95px; font-size: 9.5px; }
+    .avatar-outer { width: 110px; height: 110px; }
+    .socials { flex-direction: column; align-items: center; }
   }
 
   @media print {
@@ -408,123 +498,124 @@
   <div class="header">
     <div class="mantra">|| Shri Ganeshay Namah ||</div>
     <h1>Marriage Biodata</h1>
-    <div class="h-line"><span></span><div class="dia"></div><span></span></div>
+    <div class="orn"><span class="ln"></span><span class="circle"></span><span class="ln"></span></div>
   </div>
 
   <div class="profile">
-    <div class="photo-ring">
-      <div class="photo">
+    <div class="avatar-outer">
+      <div class="avatar-inner">
         <img src="Arvind.jpg" alt="Arvind Kumar">
       </div>
     </div>
-    <h2>Arvind Kumar</h2>
-    <div class="sub">Software Engineer · B.Tech ECE</div>
+    <div class="name">Arvind Kumar</div>
+    <div class="role">Software Engineer · B.Tech ECE</div>
 
     <div class="socials">
-      <a href="https://www.linkedin.com/in/arvind-kumar-239a741a0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="s-btn li">
+      <a href="https://www.linkedin.com/in/arvind-kumar-239a741a0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="soc li">
         <i class="fa-brands fa-linkedin-in"></i> LinkedIn
       </a>
-      <a href="https://www.instagram.com/arvind_kr17?igsh=MnJ6c2V0ejh2c29k" target="_blank" class="s-btn ig">
+      <a href="https://www.instagram.com/arvind_kr17?igsh=MnJ6c2V0ejh2c29k" target="_blank" class="soc ig">
         <i class="fa-brands fa-instagram"></i> @arvind_kr17
       </a>
     </div>
 
-    <div class="chips">
-      <span class="chip">Unmarried</span>
-      <span class="chip">5' 6"</span>
-      <span class="chip">Fair</span>
-      <span class="chip">Kushwaha</span>
-      <span class="chip">Hindi · English</span>
+    <div class="tags">
+      <span class="tag">Unmarried</span>
+      <span class="tag">5' 6"</span>
+      <span class="tag">Fair</span>
+      <span class="tag">Kushwaha</span>
+      <span class="tag">Hindi · English</span>
     </div>
   </div>
 
-  <div class="sep"></div>
+  <div class="divider"></div>
 
   <div class="body">
 
     <div class="section">
-      <div class="stitle">Personal Information</div>
-      <div class="tbl">
-        <div class="tr"><div class="tk">Full Name</div><div class="tv">Arvind Kumar</div></div>
-        <div class="tr"><div class="tk">Date of Birth</div><div class="tv">17th December 1999</div></div>
-        <div class="tr"><div class="tk">Height</div><div class="tv">5' 6"</div></div>
-        <div class="tr"><div class="tk">Complexion</div><div class="tv">Fair</div></div>
-        <div class="tr"><div class="tk">Caste</div><div class="tv">Kushwaha</div></div>
-        <div class="tr"><div class="tk">Status</div><div class="tv">Unmarried</div></div>
-        <div class="tr"><div class="tk">Languages</div><div class="tv">Hindi, English</div></div>
+      <div class="stitle"><span class="dot"></span>Personal Information</div>
+      <div class="info-tbl">
+        <div class="irow"><div class="ik">Full Name</div><div class="iv">Arvind Kumar</div></div>
+        <div class="irow"><div class="ik">Date of Birth</div><div class="iv">17th December 1999</div></div>
+        <div class="irow"><div class="ik">Height</div><div class="iv">5' 6"</div></div>
+        <div class="irow"><div class="ik">Complexion</div><div class="iv">Fair</div></div>
+        <div class="irow"><div class="ik">Caste</div><div class="iv">Kushwaha</div></div>
+        <div class="irow"><div class="ik">Status</div><div class="iv">Unmarried</div></div>
+        <div class="irow"><div class="ik">Languages</div><div class="iv">Hindi, English</div></div>
       </div>
     </div>
 
     <div class="section">
-      <div class="stitle">Education</div>
-      <div class="edu-col">
+      <div class="stitle"><span class="dot"></span>Education</div>
+      <div class="edu-stack">
         <div class="edu">
-          <div class="badge">2022</div>
-          <div><div class="e1">B.Tech – ECE</div><div class="e2">IIIT Manipur · 2018–2022</div></div>
+          <div class="yr">2022</div>
+          <div><div class="et">B.Tech – ECE</div><div class="es">Indian Institute of Information Technology, Senapati, Manipur · 2018–2022</div></div>
         </div>
         <div class="edu">
-          <div class="badge">2017</div>
-          <div><div class="e1">Intermediate</div><div class="e2">BSEB, 1st Division</div></div>
+          <div class="yr">2017</div>
+          <div><div class="et">Intermediate</div><div class="es">BSEB, 1st Division</div></div>
         </div>
         <div class="edu">
-          <div class="badge">2015</div>
-          <div><div class="e1">Matriculation</div><div class="e2">BSEB, 1st Division</div></div>
+          <div class="yr">2015</div>
+          <div><div class="et">Matriculation</div><div class="es">BSEB, 1st Division</div></div>
         </div>
       </div>
     </div>
 
     <div class="section">
-      <div class="stitle">Profession</div>
+      <div class="stitle"><span class="dot"></span>Profession</div>
       <div class="pro">
-        <div class="pt">Software Engineer</div>
-        <div class="pc">JusTransform</div>
-        <div class="pm">
-          <span class="pp">💻 Remote / WFH</span>
-          <span class="pp">🌐 justransform.com</span>
+        <div class="p1">Software Engineer</div>
+        <div class="p2">JusTransform</div>
+        <div class="pills">
+          <span class="pill">💻 Remote / WFH</span>
+          <a href="https://www.justransform.com" target="_blank" class="pill" style="text-decoration:none;color:inherit">🌐 justransform.com</a>
         </div>
       </div>
     </div>
 
     <div class="section">
-      <div class="stitle">Family Details</div>
-      <div class="fgrid">
-        <div class="fc"><div class="fr">Grandfather</div><div class="fn">Bhannu Prasad</div></div>
-        <div class="fc"><div class="fr">Family Status</div><div class="fn">Middle Class</div></div>
-        <div class="fc"><div class="fr">Father</div><div class="fn">Rameshwar Prasad</div><div class="fo">Govt. Teacher</div></div>
-        <div class="fc"><div class="fr">Mother</div><div class="fn">Indu Devi</div></div>
-        <div class="fc"><div class="fr">Sibling</div><div class="fn">Puja Kumari</div><div class="fo">Govt. Teacher</div></div>
-        <div class="fc"><div class="fr">Sibling</div><div class="fn">Mira Kumari</div></div>
-        <div class="fc w"><div class="fr">Sibling</div><div class="fn">Rambabu Kumar</div></div>
+      <div class="stitle"><span class="dot"></span>Family Details</div>
+      <div class="fam-grid">
+        <div class="fcard"><div class="fr">Grandfather</div><div class="fn">Bhannu Prasad</div></div>
+        <div class="fcard"><div class="fr">Family Status</div><div class="fn">Middle Class</div></div>
+        <div class="fcard"><div class="fr">Father</div><div class="fn">Rameshwar Prasad</div><div class="fo">Govt. Teacher</div></div>
+        <div class="fcard"><div class="fr">Mother</div><div class="fn">Indu Devi</div></div>
+        <div class="fcard"><div class="fr">Sibling</div><div class="fn">Puja Kumari</div><div class="fo">Govt. Teacher</div></div>
+        <div class="fcard"><div class="fr">Sibling</div><div class="fn">Mira Kumari</div></div>
+        <div class="fcard full"><div class="fr">Sibling</div><div class="fn">Rambabu Kumar</div></div>
       </div>
     </div>
 
     <div class="section">
-      <div class="stitle">Contact & Address</div>
+      <div class="stitle"><span class="dot"></span>Contact & Address</div>
       <div class="cbox">
-        <div class="al">Address</div>
-        <div class="at">
+        <div class="clabel">Address</div>
+        <div class="caddr">
           Vill – Noneya West Tola, Post – South Noneya, P.S – Paharpur<br>
           Dist – East Champaran, Bihar - 845422
         </div>
-        <div class="crow">
-          <div class="cit">
-            <div class="ico"><svg><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-            <div><div class="ck">Mobile</div><div class="cx">+91 8789694039</div></div>
+        <div class="citems">
+          <div class="ci">
+            <div class="cic"><svg><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div><div class="cl">Mobile</div><div class="cv">+91 8789694039</div></div>
           </div>
-          <div class="cit">
-            <div class="ico"><svg><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-            <div><div class="ck">Email</div><div class="cx">arvindkr40882@gmail.com</div></div>
+          <div class="ci">
+            <div class="cic"><svg><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div><div class="cl">Email</div><div class="cv">arvindkr40882@gmail.com</div></div>
           </div>
         </div>
       </div>
     </div>
 
     <div class="foot">
+      <div class="foot-orn"><span class="fl"></span><span class="fc"></span><span class="fr"></span></div>
       <div class="sv">|| Shubh Vivah ||</div>
     </div>
   </div>
 
-  <div class="gbar"></div>
+  <div class="bottom-strip"></div>
 </div>
 
 </body>
